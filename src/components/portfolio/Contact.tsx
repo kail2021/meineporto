@@ -26,7 +26,7 @@ const Contact = () => {
       <div className="container max-w-4xl">
         <Reveal className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-3">{t("contact.eyebrow")}</p>
-          <h2 className="text-4xl sm:text-5xl font-bold">
+          <h2 className="text-6xl sm:text-7xl font-bold">
             <span className="text-gradient">{t("contact.title")}</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">{t("contact.subtitle")}</p>
@@ -39,7 +39,7 @@ const Contact = () => {
               className="glass rounded-3xl p-6 flex items-center gap-4 hover:shadow-glow hover:-translate-y-1 transition-all duration-300 ease-smooth"
             >
               <div className="w-12 h-12 rounded-2xl aurora-bg flex items-center justify-center shadow-glow shrink-0">
-                <Mail className="w-5 h-5 text-white" />
+                <Mail className="w-6 h-6 text-white" />
               </div>
               <div className="min-w-0">
                 <p className="text-xs uppercase tracking-wider text-muted-foreground">{t("contact.email_label")}</p>
