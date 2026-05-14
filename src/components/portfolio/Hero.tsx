@@ -1,9 +1,32 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowDown, Download, Mail, Github, Youtube } from "lucide-react";
 import heroImg from "@/assets/hero-portrait.jpg";
+import heroService1 from "@/assets/hero-services-1.jpg";
+import heroService2 from "@/assets/hero-services-2.jpg";
+import heroService3 from "@/assets/hero-services-3.jpg";
+import heroService4 from "@/assets/hero-services-4.jpg";
+
+const heroSlides = [
+  { src: heroImg, alt: "Developer portrait with circuit design" },
+  { src: heroService1, alt: "Web development workspace" },
+  { src: heroService2, alt: "Electronics engineering workbench" },
+  { src: heroService3, alt: "Mobile app development setup" },
+  { src: heroService4, alt: "3D CAD modeling and engineering design" },
+];
+
 
 const Hero = () => {
   const { t } = useTranslation();
+  const [current, setCurrent] = useState(0);
+  
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((c) => (c + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, []);
+
 
   return (
     <section id="top" className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
@@ -76,13 +99,34 @@ const Hero = () => {
         <div className="relative animate-scale-in">
           <div className="absolute inset-0 aurora-bg rounded-[2.5rem] blur-3xl opacity-40 scale-95" />
           <div className="relative glass-strong rounded-[2.5rem] p-3 shadow-elevated">
-            <img
-              src={heroImg}
-              alt="Developer portrait with circuit design"
-              width={1024}
-              height={1024}
-              className="rounded-[2rem] w-full aspect-square object-cover"
-            />
+            <div className="relative rounded-[2rem] w-full aspect-square overflow-hidden">
+              {heroSlides.map((slide, i) => (
+                <img
+                  key={slide.src}
+                  src={slide.src}
+                  alt={slide.alt}
+                  width={1024}
+                  height={1024}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-smooth ${
+                    i === current ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {heroSlides.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    aria-label={`Go to slide ${i + 1}`}
+                    onClick={() => setCurrent(i)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      i === current ? "w-8 bg-white shadow-glow" : "w-2.5 bg-white/50 hover:bg-white/80"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
             <div className="absolute -bottom-6 -start-6 glass-strong rounded-2xl px-4 py-3 shadow-elevated animate-float">
               <p className="text-2xl font-bold text-gradient">5+</p>
               <p className="text-xs text-muted-foreground">Years Building</p>
