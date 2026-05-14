@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "@/contexts/ThemeContext";
 import { languages } from "@/i18n/translations";
 import { cn } from "@/lib/utils";
+import Logo from "@/assets/logo.png";
+
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -50,9 +52,13 @@ const Navbar = () => {
         )}
       >
         <a href="#" className="flex items-center gap-2 px-2">
-          <div className="w-9 h-9 rounded-xl aurora-bg shadow-glow flex items-center justify-center font-bold text-white">
-            K
-          </div>
+          <div className="w-12 h-12 rounded-xl shadow-glow flex items-center justify-center font-bold text-white">
+            <img
+              src={Logo}
+              alt="Logo"
+              className="w-12 h-12 object-contain"
+            />          
+            </div>
           <span className="font-semibold tracking-tight hidden sm:inline">KHALED SALEH</span>
         </a>
 
