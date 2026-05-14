@@ -1,0 +1,21 @@
+# Allow all crawlers to index the site
+User-agent: *
+Allow: /
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Reference to sitemap
+Sitemap: https://khaledsaleh.de/sitemap.xml
+
+# Crawl delay (optional - Google typically ignores this)
+Crawl-delay: 0
+
+# Disallow specific paths if needed (currently none)
+# Disallow: /admin/
+# Disallow: /private/

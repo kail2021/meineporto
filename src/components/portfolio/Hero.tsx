@@ -56,10 +56,18 @@ const Hero = () => {
           </div>
 
           <div className="flex items-center gap-3 pt-2">
-            <a href="https://github.com/Kail2021" className="glass w-11 h-11 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+            <a 
+              href="https://github.com/Kail2021" 
+              aria-label="Visit GitHub profile"
+              className="glass w-11 h-11 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            >
               <Github className="w-4 h-4" />
             </a>
-            <a href="https://www.youtube.com/@KailSali" className="glass w-11 h-11 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+            <a 
+              href="https://www.youtube.com/@KailSali" 
+              aria-label="Visit YouTube channel"
+              className="glass w-11 h-11 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            >
               <Youtube className="w-4 h-4" />
             </a>
           </div>

@@ -65,10 +65,17 @@ const Contact = () => {
 
         <Reveal delay={300}>
           <div className="flex justify-center gap-3">
-            {[Github, Youtube, Linkedin].map((Icon, i) => (
+            {[
+              { Icon: Github, href: "https://github.com/kail2021", label: "GitHub" },
+              { Icon: Youtube, href: "https://www.youtube.com/@KailSali", label: "YouTube" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/khaled-saleh", label: "LinkedIn" }
+            ].map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="https://www.youtube.com/@KailSali"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${label} profile`}
                 className="glass w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 hover:shadow-glow transition-all duration-300"
               >
                 <Icon className="w-4 h-4" />
@@ -81,31 +88,49 @@ const Contact = () => {
           <form onSubmit={handleSend} className="glass-strong rounded-3xl p-6 sm:p-8 mt-10 space-y-4">
             <h3 className="text-2xl font-semibold text-center mb-6">{t("contact.form_title")}</h3>
             <div className="grid sm:grid-cols-2 gap-4">
-              <input
-                value={form.name}
-                onChange={(e) => setForm((current) => ({ ...current, name: e.target.value }))}
-                placeholder={t("contact.name")}
-                maxLength={100}
-                className="glass rounded-2xl px-4 py-3 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/50"
-              />
-              <input
-                type="email"
-                value={form.email}
-                onChange={(e) => setForm((current) => ({ ...current, email: e.target.value }))}
-                placeholder={t("contact.email")}
-                maxLength={255}
-                className="glass rounded-2xl px-4 py-3 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/50"
+              <div>
+                <label htmlFor="name-input" className="sr-only">Name</label>
+                <input
+                  id="name-input"
+                  value={form.name}
+                  onChange={(e) => setForm((current) => ({ ...current, name: e.target.value }))}
+                  placeholder={t("contact.name")}
+                  maxLength={100}
+                  required
+                  className="glass rounded-2xl px-4 py-3 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/50 w-full"
+                  aria-label="Your name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email-input" className="sr-only">Email</label>
+                <input
+                  id="email-input"
+                  type="email"
+                  value={form.email}
+                  onChange={(e) => setForm((current) => ({ ...current, email: e.target.value }))}
+                  placeholder={t("contact.email")}
+                  maxLength={255}
+                  required
+                  className="glass rounded-2xl px-4 py-3 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/50 w-full"
+                  aria-label="Your email"
+                />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="message-input" className="sr-only">Message</label>
+              <textarea
+                id="message-input"
+                value={form.message}
+                onChange={(e) => setForm((current) => ({ ...current, message: e.target.value }))}
+                placeholder={t("contact.message")}
+                maxLength={1000}
+                rows={5}
+                required
+                className="glass rounded-2xl px-4 py-3 bg-transparent w-full resize-none focus:outline-none focus:ring-2 focus:ring-primary/50"
+                aria-label="Your message"
               />
             </div>
-            <textarea
-              value={form.message}
-              onChange={(e) => setForm((current) => ({ ...current, message: e.target.value }))}
-              placeholder={t("contact.message")}
-              maxLength={1000}
-              rows={5}
-              className="glass rounded-2xl px-4 py-3 bg-transparent w-full resize-none focus:outline-none focus:ring-2 focus:ring-primary/50"
-            />
-            <button className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-2xl aurora-bg text-white font-semibold shadow-glow hover:scale-[1.01] transition-all duration-300 ease-smooth">
+            <button type="submit" className="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-2xl aurora-bg text-white font-semibold shadow-glow hover:scale-[1.01] transition-all duration-300 ease-smooth">
               <Send className="w-4 h-4" />
               {t("contact.send")}
             </button>
