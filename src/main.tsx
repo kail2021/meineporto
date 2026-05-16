@@ -4,6 +4,11 @@ import "./index.css";
 import "./i18n";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
+
 createRoot(document.getElementById("root")!).render(
   <ThemeProvider>
     <App />
