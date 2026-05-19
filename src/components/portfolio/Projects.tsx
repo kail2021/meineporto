@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ExternalLink, Github } from "lucide-react";
 import Reveal from "./Reveal";
+import FreeCADGallery from "../portfolio/FreeCadGallery";
 import cafe from "@/assets/project-cafe.jpg";
 import arduino from "@/assets/project-arduino.jpg";
 import rideshare from "@/assets/project-rideshare.jpg";
@@ -12,6 +14,7 @@ import video from "@/assets/project-video.jpg";
 
 const Projects = () => {
   const { t } = useTranslation();
+  const [freecadGalleryOpen, setFreecadGalleryOpen] = useState(false);
 
   const items = [
     { 
@@ -59,7 +62,7 @@ const Projects = () => {
       desc: t("projects.freecad_desc"),
       img: freecad,
       tags: ["FreeCAD", "3D", "Engineering"],
-      demo: "https://demo-freecad.com",
+      demo: "gallery",
       code: "https://github.com/omar/freecad-project"
     },
     { 
@@ -120,15 +123,25 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-2">
-                    <a
-                      href={p.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full aurora-bg text-white text-sm font-medium hover:shadow-glow transition-all"
-                    >
-                      <ExternalLink className="w-3.5 h-3.5" />
-                      {t("projects.demo")}
-                    </a>
+                    {p.demo === "gallery" ? (
+                      <button
+                        onClick={() => setFreecadGalleryOpen(true)}
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full aurora-bg text-white text-sm font-medium hover:shadow-glow transition-all"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        {t("projects.demo")}
+                      </button>
+                    ) : (
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full aurora-bg text-white text-sm font-medium hover:shadow-glow transition-all"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        {t("projects.demo")}
+                      </a>
+                    )}
 
                     <a
                       href={p.code}
@@ -147,6 +160,8 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      <FreeCADGallery isOpen={freecadGalleryOpen} onOpenChange={setFreecadGalleryOpen} />
     </section>
   );
 };
