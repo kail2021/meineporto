@@ -70,8 +70,9 @@ const Hero = () => {
               {t("hero.cta_contact")}
             </a>
             <a
-              href="/src/assets/khaled-cv.pdf"
+              href="/khaled-cv.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass font-medium hover:scale-[1.03] transition-all duration-300"
+              download
             >
               <Download className="w-4 h-4" />
               {t("hero.cta_cv")}
