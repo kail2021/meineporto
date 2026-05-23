@@ -16,8 +16,8 @@ const en: Dict = {
   hero: {
     greeting: "Hello, I'm",
     name: "Khaled Saleh",
-    role: "Programmer & Electronics Engineer",
-    tagline: "Crafting full-stack web & mobile experiences and bringing silicon to life through firmware and circuits.",
+    role: "Web/App Developer & Electronics Technician",
+    tagline: "Crafting full-stack web & mobile experiences and bringing silicon to life through firmware and circuits. using FreeCad 3D for designing industrial parts and prototypes.",
     cta_projects: "View Projects",
     cta_contact: "Get in Touch",
     cta_cv: "Download CV",

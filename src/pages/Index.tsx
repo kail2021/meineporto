@@ -14,11 +14,11 @@ const Index = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    document.title = "Kail Sali — Developer & Electronics Engineer Portfolio";
+    document.title = "KHALED SALEH — Developer & Electronics Technician Portfolio";
     document.documentElement.lang = i18n.language;
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
 
-    const desc = "Full-stack developer & electronics engineer portfolio. Web, mobile, embedded systems and circuit design. Available worldwide.";
+    const desc = "Full-stack developer & electronics technician portfolio. Web, mobile, embedded systems and circuit design. Available worldwide.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
