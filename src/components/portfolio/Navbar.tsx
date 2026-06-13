@@ -22,12 +22,25 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { href: "#about", label: t("nav.about") },
-    { href: "#skills", label: t("nav.skills") },
-    { href: "#projects", label: t("nav.projects") },
-    { href: "#donate", label: t("nav.donate") },
-    { href: "#contact", label: t("nav.contact") },
+    { href: "#about", sectionId: "about", label: t("nav.about") },
+    { href: "#skills", sectionId: "skills", label: t("nav.skills") },
+    { href: "#projects", sectionId: "projects", label: t("nav.projects") },
+    { href: "#donate", sectionId: "donate", label: t("nav.donate") },
+    { href: "#contact", sectionId: "contact", label: t("nav.contact") },
   ];
+
+  const handleNavClick = (sectionId: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setOpen(false);
+    
+    // Scroll to section with smooth behavior
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 0);
+  };
 
   const changeLang = (code: string) => {
     i18n.changeLanguage(code);
@@ -51,7 +64,7 @@ const Navbar = () => {
           scrolled ? "glass-strong py-2" : "py-3"
         )}
       >
-        <a href="#" className="flex items-center gap-2 px-2">
+        <a href="/" className="flex items-center gap-2 px-2">
           <div className="w-12 h-12 rounded-xl shadow-glow flex items-center justify-center font-bold text-white">
             <img
               src={Logo}
@@ -64,9 +77,10 @@ const Navbar = () => {
 
         <ul className="hidden md:flex items-center gap-1">
           {links.map((l) => (
-            <li key={l.href}>
+            <li key={l.sectionId}>
               <a
                 href={l.href}
+                onClick={(e) => handleNavClick(l.sectionId, e)}
                 className="px-3 py-2 text-sm font-medium rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
               >
                 {l.label}
@@ -125,10 +139,10 @@ const Navbar = () => {
         <div className="md:hidden mx-4 mt-2 glass-strong rounded-3xl p-4 animate-scale-in">
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
-              <li key={l.href}>
+              <li key={l.sectionId}>
                 <a
                   href={l.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => handleNavClick(l.sectionId, e)}
                   className="block px-4 py-3 rounded-xl text-sm font-medium hover:bg-muted/60 transition-colors"
                 >
                   {l.label}

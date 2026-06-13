@@ -5,17 +5,18 @@ Allow: /
 # Specific rules for Google
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
-# Specific rules for Bing
+# Specific rules for Bing - Give more crawl budget
 User-agent: Bingbot
 Allow: /
-
-# Reference to sitemap
-Sitemap: https://khaledsaleh.de/sitemap.xml
-
-# Crawl delay (optional - Google typically ignores this)
-Crawl-delay: 0
+Crawl-delay: 1
+Request-rate: 1/2
 
 # Disallow specific paths if needed (currently none)
 # Disallow: /admin/
 # Disallow: /private/
+
+# Reference to sitemap (place at the end for better compatibility)
+Sitemap: https://khaledsaleh.de/sitemap.xml
+Sitemap: https://khaledsaleh.de/

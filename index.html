@@ -10,12 +10,17 @@
     <meta name="keywords" content="developer, electronics engineer, react, node.js, arduino, full-stack, web development, embedded systems, circuit design, freelancer" />
     <meta name="author" content="Kail Sali" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     
-    <!-- Bing URL -->
+    <!-- Bing Verification & Configuration -->
     <meta name="msvalidate.01" content="B31EE545B4E50AB936D00EC7C8E78BE2" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-navbutton-color" content="#000000" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://khaledsaleh.de/" />
@@ -146,6 +151,16 @@
 
   <body>
     <div id="root"></div>
+    <script type="text/javascript">
+      // Handle GitHub Pages routing for SPA
+      // If the user lands on a 404 page, they'll be redirected here with the path in sessionStorage
+      if (window.sessionStorage.redirect) {
+        var redirect = window.sessionStorage.redirect;
+        delete window.sessionStorage.redirect;
+        // Use replaceState to avoid adding to browser history
+        window.history.replaceState(null, null, redirect);
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

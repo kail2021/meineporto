@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // This page is used for client-side routing on GitHub Pages
+      // It redirects all 404s back to index.html where React Router handles the routing
+      var pathParts = window.location.pathname.split('/').filter(p => p);
+      var path = '/' + pathParts.join('/');
+      
+      // Store the path for index.html to restore it
+      sessionStorage.redirect = path;
+      
+      // Redirect to home (this will load index.html)
+      if (window.location.pathname !== '/index.html') {
+        window.location.pathname = '/index.html';
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
