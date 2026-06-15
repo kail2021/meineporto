@@ -90,7 +90,7 @@ const de: Dict = {
   nav: { about: "Über", skills: "Fähigkeiten", projects: "Projekte", donate: "Spenden", contact: "Kontakt" },
   hero: {
     greeting: "Hallo, ich bin",
-    name: "Kail Sali",
+    name: "Khaled Saleh",
     role: "Programmierer & Elektroniker",
     tagline: "Entwicklung von Full-Stack-Web- und Mobile-Anwendungen sowie Firmware- und Schaltungsdesign. Ergänzt durch technisches Produktdesign und den Prototypenbau industrieller Bauteile mittels FreeCAD 3D.",
     cta_projects: "Projekte ansehen",
@@ -240,7 +240,7 @@ const tr: Dict = {
   nav: { about: "Hakkında", skills: "Yetenekler", projects: "Projeler", donate: "Bağış", contact: "İletişim" },
   hero: {
     greeting: "Merhaba, ben",
-    name: "Kail Sali",
+    name: "Khaled Saleh",
     role: "Programcı & Elektronik Mühendisi",
     tagline: "Modern web ve mobil deneyimler tasarlıyor, devreleri yazılımla hayata geçiriyorum.",
     cta_projects: "Projeleri Gör",
@@ -390,7 +390,7 @@ const it: Dict = {
   nav: { about: "Chi sono", skills: "Competenze", projects: "Progetti", donate: "Donazione", contact: "Contatti" },
   hero: {
     greeting: "Ciao, sono",
-    name: "Kail Sali",
+    name: "Khaled Saleh",
     role: "Programmatore & Ingegnere Elettronico",
     tagline: "Creo esperienze web e mobile full-stack e do vita ai circuiti tramite firmware.",
     cta_projects: "Vedi i progetti",
@@ -465,7 +465,7 @@ const es: Dict = {
   nav: { about: "Sobre mí", skills: "Habilidades", projects: "Proyectos", donate: "Donar", contact: "Contacto" },
   hero: {
     greeting: "Hola, soy",
-    name: "Kail Sali",
+    name: "Khaled Saleh",
     role: "Programador & Ingeniero Electrónico",
     tagline: "Creo experiencias web y móviles full-stack y doy vida a los circuitos con firmware.",
     cta_projects: "Ver proyectos",
