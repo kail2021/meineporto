@@ -38,7 +38,7 @@ const Projects = () => {
       desc: t("projects.rideshare_desc"),
       img: rideshare,
       tags: ["React Native", "Maps", "Node"],
-      demo: "https://demo-rideshare.com",
+      demo: "https://youtu.be/mYck7EsWtko",
       code: "https://github.com/omar/rideshare"
     },
     { 
@@ -46,7 +46,7 @@ const Projects = () => {
       desc: t("projects.school_desc"),
       img: school,
       tags: ["React", "Dashboard", "Database"],
-      demo: "https://demo-school.com",
+      demo: "https://youtu.be/vHjbcT03QMU",
       code: "https://github.com/omar/school-system"
     },
     { 
