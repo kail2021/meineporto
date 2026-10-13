@@ -68,7 +68,7 @@ const Contact = () => {
             {[
               { Icon: Github, href: "https://github.com/kail2021", label: "GitHub" },
               { Icon: Youtube, href: "https://www.youtube.com/@KailSali", label: "YouTube" },
-              { Icon: Linkedin, href: "https://www.linkedin.com/in/khaled-saleh", label: "LinkedIn" }
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/khaled-saleh-299a09410/", label: "LinkedIn" }
             ].map(({ Icon, href, label }) => (
               <a
                 key={label}
