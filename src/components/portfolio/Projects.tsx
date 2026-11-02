@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ExternalLink, Github } from "lucide-react";
 import Reveal from "./Reveal";
 import FreeCADGallery from "../portfolio/FreeCadGallery";
-import cafe from "@/assets/project-cafe.jpg";
+import restaurant from "@/assets/project-Rest.jpg";
 import arduino from "@/assets/project-arduino.jpg";
 import rideshare from "@/assets/project-rideshare.jpg";
 import school from "@/assets/project-school-management.jpg";
@@ -18,12 +18,11 @@ const Projects = () => {
 
   const items = [
     { 
-      title: "CafeShop",
-      desc: t("projects.cafe_desc"),
-      img: cafe,
-      tags: ["React", "Tailwind", "Firebase"],
-      demo: "https://demo-cafe.com",
-      code: "https://github.com/kail2021/cafeshop.git"
+      title: "Restaurant MRBIGBIE",
+      desc: t("projects.restaurant_desc"),
+      img: restaurant,
+      tags: ["Restaurant", "Web Design"],
+      demo: "https://www.mrbigbite.de",
     },
     { 
       title: "16 LED Controller",
@@ -143,15 +142,17 @@ const Projects = () => {
                       </a>
                     )}
 
-                    <a
-                      href={p.code}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full glass text-sm font-medium hover:scale-105 transition-transform"
-                    >
-                      <Github className="w-3.5 h-3.5" />
-                      {t("projects.code")}
-                    </a>
+                    {p.code && (
+                      <a
+                        href={p.code}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full glass text-sm font-medium hover:scale-105 transition-transform"
+                      >
+                        <Github className="w-3.5 h-3.5" />
+                        {t("projects.code")}
+                      </a>
+                    )}
                   </div>
 
                 </div>

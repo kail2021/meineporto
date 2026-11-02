@@ -3,7 +3,7 @@ type Dict = {
   hero: { greeting: string; name: string; role: string; tagline: string; cta_projects: string; cta_contact: string; cta_cv: string };
   about: { eyebrow: string; title: string; experience: string; experience_desc: string; education: string; education_desc: string; bio: string };
   skills: { eyebrow: string; title: string; web: string; electrical: string; experienced: string; intermediate: string };
-  projects: { eyebrow: string; title: string; demo: string; code: string; cafe_desc: string; arduino_desc: string; rideshare_desc: string; school_desc: string; medical_desc: string; freecad_desc: string; ecu_desc: string; video_desc: string };
+  projects: { eyebrow: string; title: string; demo: string; code: string; restaurant_desc: string; arduino_desc: string; rideshare_desc: string; school_desc: string; medical_desc: string; freecad_desc: string; ecu_desc: string; video_desc: string };
   donate: { eyebrow: string; title: string; subtitle: string; preset: string; custom: string; button: string; thanks: string; methods: string };
   feedback: { eyebrow: string; title: string; subtitle: string };
   contact: { eyebrow: string; title: string; email_label: string; phone_label: string; subtitle: string; form_title: string; name: string; email: string; message: string; send: string; sent: string; error: string };
@@ -44,7 +44,7 @@ const en: Dict = {
     title: "Projects",
     demo: "Live Demo",
     code: "Source Code",
-    cafe_desc: "A liquid hug for your brain — exploring coffee cultures around the world.",
+    restaurant_desc: "A restaurant website showcasing the MRBIGBIE dining experience.",
     arduino_desc: "Expanding Arduino I/O with the MCP23X17 to drive 16 LEDs through transistor-buffered current.",
     rideshare_desc: "Mobile ride-sharing app with live map routing and a clean, minimal interface.",
     school_desc: "A complete dashboard for student records, attendance, classes, staff and school operations.",
@@ -119,7 +119,7 @@ const de: Dict = {
     title: "Projekte",
     demo: "Live-Demo",
     code: "Quellcode",
-    cafe_desc: "Eine flüssige Umarmung fürs Gehirn — Kaffeekulturen aus aller Welt entdecken.",
+    restaurant_desc: "Eine Restaurant-Website, die das kulinarische Erlebnis von MRBIGBIE präsentiert.",
     arduino_desc: "Erweiterung der Arduino-I/O mit dem MCP23X17 zur Ansteuerung von 16 LEDs über Transistorpuffer.",
     rideshare_desc: "Mobile Ride-Sharing-App mit Live-Karten-Routing und einer klaren, minimalen Oberfläche.",
     school_desc: "Ein komplettes Dashboard für Schülerdaten, Anwesenheit, Klassen, Personal und Schulabläufe.",
@@ -194,7 +194,7 @@ const ar: Dict = {
     title: "مشاريعي",
     demo: "عرض مباشر",
     code: "الشيفرة",
-    cafe_desc: "عناقٌ سائل للعقل — استكشاف ثقافات القهوة حول العالم.",
+    restaurant_desc: "موقع مطعم يعرض تجربة تناول الطعام في MRBIGBIE.",
     arduino_desc: "توسيع مخارج الأردوينو باستخدام MCP23X17 للتحكم في 16 ليد عبر ترانزستورات.",
     rideshare_desc: "تطبيق نقل تشاركي بخريطة حية وواجهة بسيطة وأنيقة.",
     school_desc: "لوحة إدارة متكاملة لسجلات الطلاب والحضور والصفوف والموظفين وعمليات المدرسة.",
@@ -269,7 +269,7 @@ const tr: Dict = {
     title: "Projelerim",
     demo: "Canlı Demo",
     code: "Kaynak Kod",
-    cafe_desc: "Beyne sıvı bir sarılma — dünya kahve kültürlerini keşfetmek.",
+    restaurant_desc: "MRBIGBIE'nin yemek deneyimini tanıtan bir restoran web sitesi.",
     arduino_desc: "MCP23X17 ile Arduino I/O genişletip 16 LED'i transistör tamponuyla sürmek.",
     rideshare_desc: "Canlı harita yönlendirmeli, sade arayüzlü mobil yolculuk paylaşım uygulaması.",
     school_desc: "Öğrenci kayıtları, yoklama, sınıflar, personel ve okul operasyonları için kapsamlı panel.",
@@ -344,7 +344,7 @@ const uk: Dict = {
     title: "Проєкти",
     demo: "Демо",
     code: "Код",
-    cafe_desc: "Рідкі обійми для мозку — дослідження кавових культур світу.",
+    restaurant_desc: "Сайт ресторану, що представляє гастрономічний досвід MRBIGBIE.",
     arduino_desc: "Розширення I/O Arduino за допомогою MCP23X17 для керування 16 світлодіодами.",
     rideshare_desc: "Мобільний застосунок поїздок із живою картою та мінімалістичним інтерфейсом.",
     school_desc: "Повна панель для записів учнів, відвідуваності, класів, персоналу та шкільних процесів.",
@@ -419,7 +419,7 @@ const it: Dict = {
     title: "Progetti recenti",
     demo: "Demo live",
     code: "Codice",
-    cafe_desc: "Un abbraccio liquido per il cervello — culture del caffè da tutto il mondo.",
+    restaurant_desc: "Un sito web di ristorazione che presenta l'esperienza culinaria di MRBIGBIE.",
     arduino_desc: "Estensione I/O di Arduino con MCP23X17 per pilotare 16 LED tramite transistor.",
     rideshare_desc: "App di ride sharing con mappa live e interfaccia minimal.",
     school_desc: "Dashboard completa per registri studenti, presenze, classi, staff e operazioni scolastiche.",
@@ -494,7 +494,7 @@ const es: Dict = {
     title: "Proyectos recientes",
     demo: "Demo en vivo",
     code: "Código",
-    cafe_desc: "Un abrazo líquido para el cerebro — explorando culturas del café del mundo.",
+    restaurant_desc: "Un sitio web de restaurante que presenta la experiencia gastronómica de MRBIGBIE.",
     arduino_desc: "Ampliación de E/S de Arduino con MCP23X17 para controlar 16 LEDs mediante transistores.",
     rideshare_desc: "App de viajes compartidos con mapa en vivo e interfaz minimalista.",
     school_desc: "Panel completo para registros de estudiantes, asistencia, clases, personal y operaciones escolares.",

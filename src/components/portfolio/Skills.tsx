@@ -28,6 +28,11 @@ const web: Skill[] = [
   { name: "Node.js", level: "intermediate", logo: "nodedotjs", color: "5FA04E" },
   { name: "Firebase", level: "experienced", logo: "firebase", color: "DD2C00" },
   { name: "Tailwind / Material UI", level: "experienced", logo: "tailwindcss", color: "06B6D4" },
+  { name: "Vercel", level: "intermediate", logo: "vercel", color: "ffffff" },
+  { name: "Neon Database", level: "intermediate", logo: "neon", color: "00E599" },
+  { name: "Supabase", level: "intermediate", logo: "supabase", color: "3FCF8E" },
+  { name: "MongoDB", level: "intermediate", logo: "mongodb", color: "47A248" },
+  { name: "Expo", level: "intermediate", logo: "expo", color: "ffffff" },
 ];
 
 const electrical: Skill[] = [
